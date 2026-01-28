@@ -18,7 +18,7 @@ const data = [
     },
     {
         rank: 1,
-        Roll: "0255Cybs027",
+        Roll: "0255CYBS027",
         name: "Bhavishya ",
         Point: 10,
         linkedin: "https://in.linkedin.com/in/bhavishya-rajput-56a225399",
