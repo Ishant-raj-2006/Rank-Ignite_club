@@ -3,6 +3,14 @@ const data = [
     {
         rank: 1,
         Roll: "0245CSE031",
+        name: "Anoop Kumar",
+        Point: 10,
+        linkedin: "https://www.linkedin.com/in/anup-kumar-642562395?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/voexenz0"
+    },
+    {
+        rank: 1,
+        Roll: "0245CSE031",
         name: "Anupam Kumari",
         Point: 10,
         linkedin: "https://www.linkedin.com/in/anupam-kumari-8167aa3a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
@@ -65,6 +73,30 @@ const data = [
         github: "https://github.com/Priyanka-798"
     },
     {
+        rank: 1,
+        Roll: "0255CSDS020",
+        name: "Nikhil kumar",
+        Point: 10,
+        linkedin: "https://linkedin.com/in/nikhil-kumar08",
+        github: "https://github.com/nikhilkumar609"
+    },
+    {
+        rank: 1,
+        Roll: "0255CSE001",
+        name: "Harsh Gautam",
+        Point: 10,
+        linkedin: "https://www.linkedin.com/in/harsh-gautam-b340b13a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/harshgautam8"
+    },
+    {
+        rank: 1,
+        Roll: "0255CSE015",
+        name: "Uma",
+        Point: 10,
+        linkedin: "https://www.linkedin.com/in/uma-bharti-2142923a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/uma1529-design"
+    },
+    {
         rank: 2,
         Roll: "0255CSE039",
         name: "Antriksh Arya",
@@ -72,7 +104,7 @@ const data = [
         linkedin: "",
         github: "https://github.com/antriksharyagrd-a11y"
     },
-     {
+    {
         rank: 2,
         Roll: "0255BBA068",
         name: "Prema Jaiswal",
@@ -81,7 +113,7 @@ const data = [
         github: ""
     },
     {
-        rank: 0,
+        rank: 3,
         Roll: "0255CDS035",
         name: "Prachi Kumari",
         Point: 0,
@@ -89,14 +121,27 @@ const data = [
         github: ""
     },
     {
-        rank: 0,
+        rank: 3,
         Roll: "0255EEE004",
         name: "Tushar Jaiswal",
         Point: 0,
         linkedin: "",
         github: ""
+    },
+    {
+        rank: 3,
+        Roll: "0255CDS020",
+        name: "Chikki Kumari",
+        Point: 0,
+        linkedin: "",
+        github: ""
     }
 ];
+
+// Link Validation Helper
+function isValidLink(url) {
+    return url && url.length > 0;
+}
 
 // Render Table
 function renderTable(list) {
@@ -119,8 +164,12 @@ function renderTable(list) {
                     <td>${item.Roll}</td>
                     <td>${item.name}</td>
                     <td>${item.Point}</td>
-                    <td><a href="${item.linkedin}" target="_blank">LinkedIn</a></td>
-                    <td><a href="${item.github}" target="_blank">GitHub</a></td>
+                    <td>
+                        ${isValidLink(item.linkedin) ? `<a href="${item.linkedin}" target="_blank">LinkedIn</a>` : `<span class="disabled-link">LinkedIn</span>`}
+                    </td>
+                    <td>
+                        ${isValidLink(item.github) ? `<a href="${item.github}" target="_blank">GitHub</a>` : `<span class="disabled-link">GitHub</span>`}
+                    </td>
                 </tr>
             `).join("")}
         </tbody>
@@ -138,22 +187,33 @@ function searchData() {
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // Initial Render
     renderTable(data);
 
-    document.getElementById("searchInput")
-        .addEventListener("input", searchData);
+    // Search Listener
+    const searchInput = document.getElementById("searchInput");
+    if (searchInput) {
+        searchInput.addEventListener("input", searchData);
+    }
 
-    // Welcome Voice
-    const speech = new SpeechSynthesisUtterance(
-        "Welcome to Ignite Club BOYS BugByte"
-    );
-    window.speechSynthesis.speak(speech);
+    // Welcome Screen Interaction
+    const enterBtn = document.getElementById("enterBtn");
+    const welcomeScreen = document.getElementById("welcome-screen");
 
-    // Remove Welcome Screen
-    setTimeout(() => {
-        const welcome = document.getElementById("welcome-screen");
-        if (welcome) {
-            welcome.remove();
-        }
-    }, 1000);
+    if (enterBtn && welcomeScreen) {
+        enterBtn.addEventListener("click", () => {
+            // Play Voice
+            const speech = new SpeechSynthesisUtterance("Welcome to Ignite Club BugByte");
+            window.speechSynthesis.speak(speech);
+
+            // Fade out animation
+            welcomeScreen.style.transition = "opacity 0.5s ease";
+            welcomeScreen.style.opacity = "0";
+
+            // Remove from DOM after transition
+            setTimeout(() => {
+                welcomeScreen.remove();
+            }, 500);
+        });
+    }
 });
