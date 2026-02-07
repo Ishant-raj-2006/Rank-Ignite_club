@@ -48,10 +48,10 @@ const data = [ {
         github: "https://github.com/Priyanka-798"
     },
     {
-        rank: 2,
+        rank: 1,
         Roll: "0255CSE031",
         name: "Anupam Kumari",
-        Point: 19,
+        Point: 20,
         linkedin: "https://www.linkedin.com/in/anupam-kumari-8167aa3a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/anupamguptaji123-droid"
     }, 
