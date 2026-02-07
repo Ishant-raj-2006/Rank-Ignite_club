@@ -49,15 +49,30 @@ const data = [ {
     },
     {
         rank: 2,
-        Roll: "0245CSE031",
+        Roll: "0255CSE031",
         name: "Anupam Kumari",
         Point: 19,
         linkedin: "https://www.linkedin.com/in/anupam-kumari-8167aa3a8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/anupamguptaji123-droid"
     }, 
-   
+   {
+        rank: 2,
+        Roll: "0255CSE015",
+        name: "Uma",
+        Point: 19,
+        linkedin: "https://www.linkedin.com/in/uma-bharti-2142923a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/uma1529-design"
+    },
     {
         rank: 3,
+        Roll: "0255CSE022",
+        name: "Ikra",
+        Point: 16,
+        linkedin: "https://www.linkedin.com/in/ikra-choudhary-2757713aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+        github: "https://github.com/Ikraera"
+    },
+    {
+        rank: 4,
         Roll: "0245CSE031",
         name: "Anoop Kumar",
         Point: 10,
@@ -66,7 +81,7 @@ const data = [ {
     },
     
     {
-        rank: 3,
+        rank: 4,
         Roll: "0245CDS043",
         name: "Riya Kumari",
         Point: 10,
@@ -75,7 +90,7 @@ const data = [ {
     },
    
     {
-        rank: 3,
+        rank: 4,
         Roll: "0255CDS025",
         name: "Satyam Kumar",
         Point: 10,
@@ -83,44 +98,26 @@ const data = [ {
         github: "https://github.com/satyamkmr18"
     },
    
-    
-    
-   
-    
     {
-        rank: 3,
+        rank: 4,
         Roll: "0255CSE001",
         name: "Harsh Gautam",
         Point: 10,
         linkedin: "https://www.linkedin.com/in/harsh-gautam-b340b13a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/harshgautam8"
     },
-    {
-        rank: 3,
-        Roll: "0255CSE015",
-        name: "Uma",
-        Point: 10,
-        linkedin: "https://www.linkedin.com/in/uma-bharti-2142923a9?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        github: "https://github.com/uma1529-design"
-    },
+    
      {
-        rank: 4,
+        rank: 5,
         Roll: "0255CSE059",
         name: "Raj Maurya",
         Point: 6,
         linkedin: "https://www.linkedin.com/in/hacker-undefined-08838b385?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: "https://github.com/hacker44401"
     },
-     {
-        rank: 4,
-        Roll: "0255CSE022",
-        name: "Ikra",
-        Point: 6,
-        linkedin: "https://www.linkedin.com/in/ikra-choudhary-2757713aa?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
-        github: "https://github.com/Ikraera"
-    },
+     
     {
-        rank: 5,
+        rank: 6,
         Roll: "0255CSE039",
         name: "Antriksh Arya",
         Point: 5,
@@ -128,17 +125,25 @@ const data = [ {
         github: "https://github.com/antriksharyagrd-a11y"
     },
     {
-        rank: 5,
+        rank: 6,
         Roll: "0255BBA068",
         name: "Prema Jaiswal",
         Point: 5,
         linkedin: "https://www.linkedin.com/in/prema-jaiswal-836658296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
         github: ""
     },
+     {
+        rank: 7,
+        Roll: "0255CDS026",
+        name: "Nisha Bharti ",
+        Point: 4,
+        linkedin: "",
+        github: "https://github.com/Nisha77-git"
+    },
    
     
     {
-        rank: 6,
+        rank: 8,
         Roll: "0255CDS035",
         name: "Prachi Kumari",
         Point: 1,
@@ -146,7 +151,7 @@ const data = [ {
         github: ""
     },
     {
-        rank: 6,
+        rank: 8,
         Roll: "0255EEE004",
         name: "Tushar Jaiswal",
         Point: 1,
@@ -154,13 +159,14 @@ const data = [ {
         github: ""
     },
     {
-        rank: 6,
+        rank: 8,
         Roll: "0255CDS020",
         name: "Chikki Kumari",
         Point: 1,
         linkedin: "",
         github: ""
-    }
+    },
+   
 ];
 
 // Link Validation Helper
